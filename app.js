@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser')
-
+var models = require('./data/models')
 app.set('port', (process.env.PORT || 7000));
 
 app.set('view engine', 'html');
@@ -18,6 +18,21 @@ app.engine('html', require('hogan-express-strict'));
 
 app.get('/', function(req,res, next) {
   res.render('index')
+})
+
+app.post('/', function(req,res, next) {
+  console.log(req.body)
+  models.Guest.create({
+    'name': req.body.name, 
+    'attending': req.body.attending,
+    'dietary': req.body.dietary,
+    'dietaryText': req.body.dietaryText,
+    'numberAttending': req.body.numberAttending,
+    'song1': req.body.song1,
+    'song2': req.body.song2,
+  }).then(function () {
+    res.render('index', {thanks: true})
+  });
 })
 
 app.get('/venues/name/:id', function(req,res, next) {
