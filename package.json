@@ -1,0 +1,26 @@
+{
+  "name": "tidy-css",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "sass": "./node_modules/node-sass/bin/node-sass ./assets/scss/tidy-css.scss ./public/stylesheets/tidy-css.css",
+    "watch-css": "nodemon -e scss -x \"npm run sass\" & nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "express-partial-templates": "^0.1.0",
+    "express-session": "~1.0.0",
+    "foundation-sites": "^6.2.0",
+    "hjs": "~0.0.6",
+    "hogan-express-strict": "^0.5.4",
+    "node-sass": "^3.4.2"
+  },
+  "author": "Andy Wilkinson",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}

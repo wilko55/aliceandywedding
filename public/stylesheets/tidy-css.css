@@ -1,0 +1,246 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  width: 100%; }
+
+main {
+  margin: 0 auto;
+  color: black;
+  flex: 1; }
+
+.header {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  top: 0;
+  background-color: white;
+  text-align: center;
+  border-bottom: solid black 1px; }
+
+@media screen and (min-width: 320px) {
+  .header-title {
+    font-size: 3em;
+    margin: 0px; } }
+
+@media screen and (min-width: 768px) {
+  .header-title {
+    font-size: 6em;
+    margin: 0px; } }
+
+@media screen and (min-width: 320px) {
+  .header-subtitle {
+    font-size: 2em;
+    margin: 0px; } }
+
+@media screen and (min-width: 768px) {
+  .header-subtitle {
+    font-size: 4em;
+    margin: 0px; } }
+
+.header-image {
+  background-color: #263d36;
+  background-image: url("../header.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  max-width: none;
+  padding: 10vw 2em;
+  text-align: center;
+  color: white;
+  background-position: bottom; }
+
+.footer {
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  height: 2em;
+  width: 100%;
+  border-top: solid black 1px; }
+
+.button {
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0.45em 1em;
+  margin: 0 0 1rem 0;
+  font-size: 16px;
+  background-color: #44A9CB;
+  color: black; }
+  .button:hover {
+    opacity: .85; }
+
+.alert {
+  background-color: #FF8686; }
+
+.simple-menu-horizontal {
+  position: relative;
+  display: block; }
+
+.simple-menu-horizontal li {
+  display: inline;
+  padding: 1em;
+  top: 0; }
+
+.simple-menu-vertical ul {
+  padding-left: 0em; }
+
+.simple-menu-vertical li {
+  list-style: none; }
+
+table {
+  width: 100%;
+  padding: 1em;
+  border-collapse: collapse; }
+
+tr {
+  text-align: center; }
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: .5em; }
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; }
+
+tbody tr:hover {
+  border-left: 1px solid black; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  color: #C54E55; }
+
+input, select {
+  margin-left: .2em;
+  padding: .5em;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s; }
+
+select {
+  font-size: 14px; }
+
+.row,
+.column {
+  box-sizing: border-box;
+  margin: .5em 0; }
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px; }
+
+.col {
+  position: relative;
+  float: left; }
+
+.col + .col {
+  margin-right: 1.6%; }
+
+[class*='col-']:last-of-type {
+  margin-right: 0;
+  margin-left: -1.6%; }
+
+.col-1 {
+  width: 6.86666666667%; }
+
+.col-2 {
+  width: 15.3333333333%; }
+
+.col-3 {
+  width: 23.8%; }
+
+.col-4 {
+  width: 32.2666666667%; }
+
+.col-5 {
+  width: 40.7333333333%; }
+
+.col-6 {
+  width: 49.2%; }
+
+.col-7 {
+  width: 57.6666666667%; }
+
+.col-8 {
+  width: 66.1333333333%; }
+
+.col-9 {
+  width: 74.6%; }
+
+.col-10 {
+  width: 83.0666666667%; }
+
+.col-11 {
+  width: 91.5333333333%; }
+
+.col-12 {
+  width: 100%; }
+
+@media only screen and (max-width: 550px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: auto;
+    float: none; } }
+
+.border {
+  background-color: grey; }
+
+hr {
+  max-width: 50%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+.text-input-no-border input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s; }
+
+.panel {
+  border: solid #ddd 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin: 5px; }
+  .panel .panel-header, .panel .panel-footer {
+    padding: .4em .9em;
+    background-color: #f2f2f2; }
+  .panel .panel-body {
+    padding: .9em; }
+  .panel .panel-header {
+    font-weight: 500;
+    border-bottom: solid 1px #ddd;
+    font-size: 16px; }
+  .panel .panel-footer {
+    border-top: 1px solid #ddd; }

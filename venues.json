@@ -1,0 +1,29 @@
+{
+  "venues": {
+    "camden" : {
+      "address": "Camden Town Hall",
+      "capacity": 4,
+      "type": "registry office"
+    },
+    "hackney" : {
+      "name": "Town Hall",
+      "capacity": 4,
+      "type": "registry office"
+    },
+    "hammersmith-and-Fulham": {
+      "name": "Town Hall",
+      "capacity": 8,
+      "type": "registry office"
+    },
+    "haringey": {
+      "name": "Town Hall",
+      "capacity": 4,
+      "type": "registry office"
+    },
+    "islington": {
+      "name": "Town Hall",
+      "capacity": 4,
+      "type": "registry office"
+    }
+  }
+}
