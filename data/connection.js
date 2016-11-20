@@ -5,7 +5,7 @@ module.exports = function(){
   var sequelize = new Sequelize('wedding', config.database.user, config.database.password, {
     host: 'localhost',
     dialect: 'mysql',
-    port: 3306,
+    port: 3307,
     pool: {
       max: 5,
       min: 0,
