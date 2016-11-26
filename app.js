@@ -21,9 +21,14 @@ app.get('/', function(req,res, next) {
 })
 
 app.post('/', function(req,res, next) {
+
+  if (req.body.attending === '' || req.body.name === '' || req.body.numberAttending === ''){
+    res.render('index', {error: true})
+  }
+
   console.log(req.body)
   models.Guest.create({
-    'name': req.body.name, 
+    'name': req.body.name,
     'attending': req.body.attending,
     'dietary': req.body.dietary,
     'dietaryText': req.body.dietaryText,
@@ -35,10 +40,14 @@ app.post('/', function(req,res, next) {
   });
 })
 
+app.get('/registry', function(req,res, next) {
+  res.redirect('https://prezola.com/wishlists/10171596');
+})
+
 app.get('/venues/name/:id', function(req,res, next) {
   var venues = JSON.parse(require('fs').readFileSync('./venues.json')).venues[req.params.id]
 
-  res.json(venues) 
+  res.json(venues)
 })
 
 app.get('/venues/capacity/:num', function(req,res, next) {
@@ -50,7 +59,7 @@ app.get('/venues/capacity/:num', function(req,res, next) {
       matches[prop] = venues.venues[prop]
     }
   }
-  res.json(matches) 
+  res.json(matches)
 })
 
 app.post('/churlish', function(req,res, next) {
@@ -59,7 +68,7 @@ app.post('/churlish', function(req,res, next) {
     res.send('yo')
   }
   else {
-    res.render('churlish', {showPass: true, showVid: false})  
+    res.render('churlish', {showPass: true, showVid: false})
   }
 })
 
