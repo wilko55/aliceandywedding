@@ -41,7 +41,8 @@ app.post('/', function(req,res, next) {
 })
 
 app.get('/registry', function(req,res, next) {
-  res.redirect('https://prezola.com/wishlists/10171596');
+  res.render('registry')
+  // res.redirect('https://prezola.com/wishlists/10171596');
 })
 
 app.get('/venues/name/:id', function(req,res, next) {
