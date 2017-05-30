@@ -26,6 +26,7 @@ a {
 
 a:hover {
   color: #C54E55;
+  cursor: pointer;
 }
 
 .transparent-input {
@@ -44,7 +45,7 @@ input[type="checkbox"] {
     margin:10px auto;
     position:relative
 }
- 
+
 .rvsp li:after {
     content:'';
     position:absolute;
@@ -69,7 +70,7 @@ input[type="radio"] + label span {
     cursor:pointer;
 }
 input[type="radio"]:checked + label span {
-    background-color: red; 
+    background-color: red;
 }
 
 .label-less-padding {
@@ -82,11 +83,10 @@ input[type="radio"]:checked + label span {
 
 label {
     cursor:pointer;
-    color: black;
+    /*color: black;*/
     margin:5px 0;
     padding-left:40px;
     position:relative;
-    font-size:30px;
     -webkit-transition:.2s linear;
     -moz-transition:.2s linear;
     -o-transition:.2s linear;
@@ -112,7 +112,7 @@ label:before {
     -o-transition:.2s linear;
     transition:.2s linear
 }
- 
+
 label:after {
     transform:rotate(-45deg);
     transform-origin:0 20px;
@@ -130,7 +130,7 @@ input[type="checkbox"]:checked + label:after,input[type="checkbox"]:checked + la
 input[type="radio"]:checked + label:after,input[type="radio"]:checked + label:before {
     height:100%
 }
- 
+
 input[type="checkbox"]:checked + label {
     color:#fff
 }
@@ -180,7 +180,7 @@ input[type="radio"]:checked + label {
   z-index: 1;
   -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
       transform: rotate(7deg);
-}  
+}
 
 .pin:after {
   background-color: #A31;
@@ -237,12 +237,42 @@ textarea:focus, input:focus{
     border: solid black 2px;
 }
 
-form {
+/*form {
   margin-left: 9em;
-}
+}*/
 
 /*@media screen and (min-width: 320px) {
   form {
     margin-left: 0em;
   }
 }*/
+
+@media all
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  label {
+    color:red;
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  label {
+    color:yellow;
+    font-size: 2em;
+  }
+}
+
+span {
+  font-size:1.5em;
+  font-weight:600;
+}
+
+p {
+  font-size: 3em;
+  font-weight:500;
+}
+
+.fa-large {
+  font-size: 2em;
+}
